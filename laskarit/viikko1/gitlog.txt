@@ -1,0 +1,113 @@
+commit caa0d70e5c0fa04bb2057070447e7ac67baf79cf
+Author: Eliel <eliel-ing@hotmail.fi>
+Date:   Mon Mar 18 14:26:42 2019 +0200
+
+    en ymmärrä
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 09574e23cd9a1964ef7e92830af7a6f99a6f2f74
+Author: Eliel <eliel-ing@hotmail.fi>
+Date:   Mon Mar 18 14:17:00 2019 +0200
+
+    tiedostoja luotu
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit e9d82e9ef1d63c4f190d989e1d067d42745e05cf
+Author: Eliel <eliel-ing@hotmail.fi>
+Date:   Mon Mar 18 14:09:36 2019 +0200
+
+    joku artisiti ja joku
+
+ eka.txt    |  7 ++++++-
+ kolmas.txt | 12 +++++++++++-
+ 2 files changed, 17 insertions(+), 2 deletions(-)
+
+commit b16a2b27ef1f0ff2a8fed6eb93984c9449215cbd
+Author: Eliel <eliel-ing@hotmail.fi>
+Date:   Mon Mar 18 14:06:04 2019 +0200
+
+    uusinimi
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 13077a047b88be587c50ca21e797e32d0453b0f3
+Author: Eliel <eliel-ing@hotmail.fi>
+Date:   Mon Mar 18 14:03:57 2019 +0200
+
+    poisto
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit c5bbc561548c804650a6ba1dd84f758839b072d5
+Author: Eliel <eliel-ing@hotmail.fi>
+Date:   Mon Mar 18 14:00:06 2019 +0200
+
+    wikiwiki
+
+ tiedosto.txt | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
+commit 45576e4f6be200e320d9ba9b67ec04ebf3e80f36
+Author: Eliel <eliel-ing@hotmail.fi>
+Date:   Mon Mar 18 13:57:18 2019 +0200
+
+    wiki
+
+ tiedosto.txt | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+commit 47ace93855bf1d06c21e2cf32f33ce88cbefa879
+Author: Eliel <eliel-ing@hotmail.fi>
+Date:   Mon Mar 18 13:49:39 2019 +0200
+
+    kamaa
+
+ stuff/tietoa.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit b2ea6b207ecf88c2949c010bee3d1a9c1cfe624d
+Author: Eliel <eliel-ing@hotmail.fi>
+Date:   Mon Mar 18 13:48:12 2019 +0200
+
+    toisen ja kolmannen muutokset
+
+ kolmas.txt | 2 ++
+ toinen.txt | 1 +
+ 2 files changed, 3 insertions(+)
+
+commit 97657d750a1205bf732657102895d9552d0ef660
+Author: Eliel <eliel-ing@hotmail.fi>
+Date:   Mon Mar 18 13:45:36 2019 +0200
+
+    kolmas.txt luotu
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 1b31fd267d31ca7d52c32fb4720c0f4210a2927b
+Author: Eliel <eliel-ing@hotmail.fi>
+Date:   Mon Mar 18 13:38:39 2019 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 29da9919b0360ea7868a393b1fb566972b8ba12b
+Author: Eliel <eliel-ing@hotmail.fi>
+Date:   Mon Mar 18 13:33:49 2019 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
