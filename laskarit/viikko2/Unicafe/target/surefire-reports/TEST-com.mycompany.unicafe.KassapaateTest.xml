@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="21" failures="0" name="com.mycompany.unicafe.KassapaateTest" time="0.003" errors="0" skipped="0">
+<testsuite tests="21" failures="0" name="com.mycompany.unicafe.KassapaateTest" time="0.013" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="10.0.2+13-Ubuntu-1ubuntu0.18.04.4"/>
@@ -67,20 +67,20 @@
   <testcase classname="com.mycompany.unicafe.KassapaateTest" name="kortilleLataus" time="0"/>
   <testcase classname="com.mycompany.unicafe.KassapaateTest" name="myydytMaukkaatLounaatKasvaa" time="0"/>
   <testcase classname="com.mycompany.unicafe.KassapaateTest" name="rahaKasvaaMaukkaanLounaanVerran" time="0"/>
-  <testcase classname="com.mycompany.unicafe.KassapaateTest" name="rahaKasvaaEdullisenLounaanVerran" time="0"/>
+  <testcase classname="com.mycompany.unicafe.KassapaateTest" name="rahaKasvaaEdullisenLounaanVerran" time="0.001"/>
   <testcase classname="com.mycompany.unicafe.KassapaateTest" name="rahaaKuluuMaukkaanVerran" time="0"/>
   <testcase classname="com.mycompany.unicafe.KassapaateTest" name="kassastaNegatiivinen" time="0"/>
   <testcase classname="com.mycompany.unicafe.KassapaateTest" name="rahaEiRiitaMikaanEiMuutu" time="0"/>
   <testcase classname="com.mycompany.unicafe.KassapaateTest" name="kassastaLataus" time="0"/>
   <testcase classname="com.mycompany.unicafe.KassapaateTest" name="korttiEiMuutaKassaa" time="0"/>
-  <testcase classname="com.mycompany.unicafe.KassapaateTest" name="oikeaVaihtorahaKunMaukas" time="0"/>
+  <testcase classname="com.mycompany.unicafe.KassapaateTest" name="oikeaVaihtorahaKunMaukas" time="0.001"/>
   <testcase classname="com.mycompany.unicafe.KassapaateTest" name="kortillaLiianVahanRahaa" time="0"/>
   <testcase classname="com.mycompany.unicafe.KassapaateTest" name="JosRahaEiRiitaPalautetaanSe" time="0"/>
-  <testcase classname="com.mycompany.unicafe.KassapaateTest" name="myydytEdullisetLounaatKasvaa" time="0"/>
+  <testcase classname="com.mycompany.unicafe.KassapaateTest" name="myydytEdullisetLounaatKasvaa" time="0.001"/>
   <testcase classname="com.mycompany.unicafe.KassapaateTest" name="josRahaRiittaaMyydytEdullisetLounaatKasvaa" time="0.001"/>
   <testcase classname="com.mycompany.unicafe.KassapaateTest" name="palauttaaTrueMaukkaalla" time="0"/>
   <testcase classname="com.mycompany.unicafe.KassapaateTest" name="falseJosRahaEiRiita" time="0"/>
   <testcase classname="com.mycompany.unicafe.KassapaateTest" name="oikeaVaihtorahaKunEdullinen" time="0"/>
   <testcase classname="com.mycompany.unicafe.KassapaateTest" name="palauttaaTrueEdullisella" time="0"/>
-  <testcase classname="com.mycompany.unicafe.KassapaateTest" name="josRahaRiittaaMyydytMaukkaatLounaatKasvaa" time="0"/>
+  <testcase classname="com.mycompany.unicafe.KassapaateTest" name="josRahaRiittaaMyydytMaukkaatLounaatKasvaa" time="0.007"/>
 </testsuite>
