@@ -7,3 +7,4 @@ drama film directed by *Curtis Bernhardt* and starring *Evelyn Holt*,
 
 [Komentorivi](https://github.com/UndergroundSea/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
 [gitlog](https://github.com/UndergroundSea/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
+[työaikakirjanpito](https://github.com/UndergroundSea/ot-harjoitustyo/blob/master/laskarit/tyoaikakirjanpito.txt)
