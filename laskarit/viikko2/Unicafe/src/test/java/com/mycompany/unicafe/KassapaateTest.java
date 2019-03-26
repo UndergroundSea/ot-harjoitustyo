@@ -154,4 +154,11 @@ public class KassapaateTest {
         assertEquals(100100, kassa.kassassaRahaa());
     }
     
+    @Test
+    public void kassastaNegatiivinen() {
+        kassa.lataaRahaaKortille(kortti, -100);
+        assertEquals("saldo: 10.0", kortti.toString());
+        assertEquals(100000, kassa.kassassaRahaa());
+    }
+    
 }
