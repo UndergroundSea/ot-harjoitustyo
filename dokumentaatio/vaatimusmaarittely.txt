@@ -11,11 +11,13 @@ Käyttöliittymä
 Toiminnallisuudet
 -Peli luo satunnaisesti kehitetyn pelikentän
 -Jos klikkaa miinaa sisältävää ruutua niin peli päättyy, sille voi tulaa oma näkymänsä
+-Pelin voittaa kun on kääntänyt kaikki miinattomat ruudut
 -Peli mittaa kuluneen ajan ja tallentaa parhaan ajan tietokantaan
 -Pelin pystyy tallentamaan kesken kaiken
 -Peliin tulee "huijauskoodi", joka tuo pelaajalle jotain etua
 -Miinattomissa ruuduissa on numero, joka ilmoittaa ympärillä olevien miinojen määrän
 -Kun nollan sisältävän ruudun vieressä oleva ruutu kääntyy, myös nollan sisältävä ruutu kääntyy
+-Tyhjään ruutuun voi pistää "lipun" jos epäilee siinä olevan miina
 
 Mahdolliset lisätoiminnallisuudet
 -Erilaisia pelimuotoja
