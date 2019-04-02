@@ -1,5 +1,7 @@
 package minesweeper;
 
+import javafx.scene.control.Button;
+
 
 public class Pane {
     
@@ -7,13 +9,17 @@ public class Pane {
     private int y;
     private boolean mine;
     private int value;
+    private Button button;
+    private boolean turned;
     
-    public Pane(int x, int y, boolean mine) {
+    public Pane(int x, int y, Button button) {
         
         this.x = x;
         this.y = y;
-        this.mine = mine;
+        this.mine = false;
         this.value = 99;
+        this.button = button;
+        this.turned = false;
         
     }
     
@@ -36,5 +42,15 @@ public class Pane {
     public boolean getMine() {
         return this.mine;
     }
+    
+    public void setMine(boolean mine) {
+        this.mine = mine;
+    }
+    
+    public void turn() {
+        this.turned = true;
+    }
+    
+   
     
 }
