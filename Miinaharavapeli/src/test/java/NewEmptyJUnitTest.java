@@ -52,6 +52,13 @@ public class NewEmptyJUnitTest {
         assertEquals(false, minefield.getAlive());
     }
     
+    @Test
+    public void placeMines() {
+        minefield.placeMines();
+        assertEquals(7, minefield.getMines().size());
+        
+    }
+    
 //    kortti.lataaRahaa(100);
 //        assertEquals("saldo: 1.10", kortti.toString());
     

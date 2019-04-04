@@ -49,6 +49,10 @@ public class MineField {
         return this.turnedPanes;
     }
     
+    public void setTurnedPanes(int turnedPanes) {
+        this.turnedPanes = turnedPanes;
+    }
+    
     public void setTurning(boolean turning) {
         this.turning = turning;
     }
