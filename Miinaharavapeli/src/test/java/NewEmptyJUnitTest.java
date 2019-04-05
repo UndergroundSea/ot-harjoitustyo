@@ -47,12 +47,12 @@ public class NewEmptyJUnitTest {
      @Test
      public void hello() {}
      
-     @Test
-     public void setAndGetValue() {
-         Pane pane = new Pane(10, 1, new Button("miina"));
-//         pane.setMine(true);
-         assertEquals(false, pane.getMine());
-     }
+//     @Test
+//     public void setAndGetValue() {
+//         Pane pane = new Pane(10, 1, new Button("miina"));
+////         pane.setMine(true);
+//         assertEquals(false, pane.getMine());
+//     }
     
     @Test
     public void endTheGame() {
