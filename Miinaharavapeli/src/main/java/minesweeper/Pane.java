@@ -50,11 +50,25 @@ public class Pane {
     public void setMine(boolean mine) {
         this.mine = mine;
     }
-    
+
     public void setColor(Color color) {
         this.color = color;
     }
-    
+
+    public void setColor(int mines) {
+        if (mines == 0) {
+            this.setColor(Color.WHITE);
+        } else if (mines == 1) {
+            this.setColor(Color.GREEN);
+        } else if (mines == 2) {
+            this.setColor(Color.BLUE);
+        } else if (mines == 3) {
+            this.setColor(Color.RED);
+        } else {
+            this.setColor(Color.DARKRED);
+        }
+    }
+
     public Color getColor() {
         return this.color;
     }
@@ -67,19 +81,9 @@ public class Pane {
         button.setOnAction((event) -> {
             if (minefield.getTurning()) {
                 if (minefield.getAlive()) {
-                    if (this.getMine()) {
-                        minefield.endGame();
-                        button.setText("¤");
-                        gameState.setText("Heh heh hee, hävisit pelin!");
-                    } else {
-                        button.setText(Integer.toString(minefield.countValue(this)));
-                        button.setTextFill(this.color);
-                        this.turn();
-                        minefield.turnPane();
-                        if (minefield.getTurnedPanes() == 43) {
-                            gameState.setText("Hi hi hiii, kutittaa! Voitit pelin!");
-                        }
-                    }
+
+                    this.turnPane(minefield, gameState);
+
                 }
 
             } else {
@@ -91,4 +95,34 @@ public class Pane {
         });
     }
 
+    public void turnPane(MineField minefield, Label gameState) {
+        if (this.getMine()) {
+            minefield.endGame();
+            button.setText("¤");
+            gameState.setText("Heh heh hee, hävisit pelin!");
+        } else {
+            button.setText(Integer.toString(minefield.countValue(this)));
+            button.setTextFill(this.color);
+            this.turn();
+            minefield.addTurnedPane();
+            if (minefield.getTurnedPanes() == 43) {
+                gameState.setText("Hi hi hiii, kutittaa! Voitit pelin!");
+            }
+        }
+    }
+
 }
+
+//                    if (this.getMine()) {
+//                        minefield.endGame();
+//                        button.setText("¤");
+//                        gameState.setText("Heh heh hee, hävisit pelin!");
+//                    } else {
+//                        button.setText(Integer.toString(minefield.countValue(this)));
+//                        button.setTextFill(this.color);
+//                        this.turn();
+//                        minefield.addTurnedPane();
+//                        if (minefield.getTurnedPanes() == 43) {
+//                            gameState.setText("Hi hi hiii, kutittaa! Voitit pelin!");
+//                        }
+//                    }

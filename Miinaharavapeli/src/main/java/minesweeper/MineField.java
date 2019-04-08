@@ -41,7 +41,7 @@ public class MineField {
         return this.mines;
     } 
     
-    public void turnPane() {
+    public void addTurnedPane() {
         this.turnedPanes++;
     }
     
@@ -78,17 +78,7 @@ public class MineField {
             }
         }
         
-        if (mines == 0) {
-            pane.setColor(Color.WHITE);
-        } else if (mines == 1) {
-            pane.setColor(Color.GREEN);
-        } else if (mines == 2) {
-            pane.setColor(Color.BLUE);
-        } else if (mines == 3) {
-            pane.setColor(Color.RED);
-        } else {
-            pane.setColor(Color.DARKRED);
-        }
+        pane.setColor(mines);
         
         return mines;
 //        grid[x][y].setValue(mines);
@@ -134,6 +124,24 @@ public class MineField {
         }
     }
     
-    
-    
 }
+
+
+
+
+
+
+
+
+
+//        if (mines == 0) {
+//            pane.setColor(Color.WHITE);
+//        } else if (mines == 1) {
+//            pane.setColor(Color.GREEN);
+//        } else if (mines == 2) {
+//            pane.setColor(Color.BLUE);
+//        } else if (mines == 3) {
+//            pane.setColor(Color.RED);
+//        } else {
+//            pane.setColor(Color.DARKRED);
+//        }
