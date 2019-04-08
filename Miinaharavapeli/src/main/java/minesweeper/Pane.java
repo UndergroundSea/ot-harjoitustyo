@@ -103,8 +103,8 @@ public class Pane {
         } else {
             button.setText(Integer.toString(minefield.countValue(this)));
             button.setTextFill(this.color);
-            this.turn();
-            minefield.addTurnedPane();
+            this.turn();            
+            minefield.addTurnedPane();            
             if (minefield.getTurnedPanes() == 43) {
                 gameState.setText("Hi hi hiii, kutittaa! Voitit pelin!");
             }

@@ -5,4 +5,6 @@ Päivä	Aika	mitä tein
 2.4	2	Miinojenlaskemistoiminnan tekeminen ja ruutujen "kääntyminen", sekä pelin voittaminen tai häviäiminen.
 4.4	3	Käyttöliittymän tekeminen, sekä mahdollisuus miinojen merkitsemiseen ja uudet värit eri numeroille. Myös muutaman testin tekeminen.
 5.4	2	Luokkakaavion tekeminen, ReadMe:n ja muiden tiedostojen siistiminen, sekä uusien testien tekeminen.
-8.4	1	Checkstylen käyttöönotto ja virheiden korjaaminen.
+8.4	2	Checkstylen käyttöönotto ja sen virheiden korjaaminen, sekä uusien testien tekeminen.
+
+yhteensä 13
