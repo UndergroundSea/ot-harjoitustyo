@@ -6,5 +6,6 @@ Päivä	Aika	mitä tein
 4.4	3	Käyttöliittymän tekeminen, sekä mahdollisuus miinojen merkitsemiseen ja uudet värit eri numeroille. Myös muutaman testin tekeminen.
 5.4	2	Luokkakaavion tekeminen, ReadMe:n ja muiden tiedostojen siistiminen, sekä uusien testien tekeminen.
 8.4	3	Checkstylen käyttöönotto ja sen virheiden korjaaminen, sekä uusien testien tekeminen. Sekvenssikaavion tekeminen.
+9.4 1 Uusien testien tekeminen.
 
-yhteensä 13
+yhteensä 14
