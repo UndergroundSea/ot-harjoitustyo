@@ -1,11 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;
+import javafx.scene.paint.Color;
 import minesweeper.MineField;
 import minesweeper.Pane;
 import org.junit.After;
@@ -22,7 +18,10 @@ import org.junit.Test;
 public class NewEmptyJUnitTest {
     
     MineField minefield;
-//    Pane pane;
+    Label gameState;
+    GridPane grid;
+    Pane pane;
+    Button button;
     
     public NewEmptyJUnitTest() {
     }
@@ -37,7 +36,8 @@ public class NewEmptyJUnitTest {
     @Before
     public void setUp() {
         minefield = new MineField(10, 5);
-//        pane = new Pane(0, 0, new Button());
+        pane = new Pane(0, 0, button);
+//        gameState.setText("Hi hi hiii, kutittaa! Voitit pelin!");
 //        minefield.setPane(pane, 0, 0);
         
     }
@@ -65,13 +65,42 @@ public class NewEmptyJUnitTest {
         minefield.endGame();
         assertEquals(false, minefield.getAlive());
     }
+    
+    @Test
+    public void addingTurnedPane() {
+        minefield.addTurnedPane();
+        assertEquals(1, minefield.getTurnedPanes());
+    }
 //    
     @Test
     public void placeMines() {
         minefield.placeMines();
-        assertEquals(7, minefield.getMines().size());
-        
+        assertEquals(7, minefield.getMines().size());       
     }
+    
+    @Test
+    public void settingColor() {
+        pane.setColor(Color.BLUE);
+        assertEquals(Color.BLUE, pane.getColor());
+    }
+    
+    @Test
+    public void settingOtherColor() {
+        pane.setColor(1);
+        assertEquals(Color.GREEN, pane.getColor());
+    }
+    
+    @Test
+    public void settingAndGettingValue() {
+        pane.setValue(4);
+        assertEquals(4, pane.getValue());
+    }
+    
+//    @Test
+//    public void placingButtons() {
+//        minefield.placeButtons(grid, gameState);
+//        assertEquals(50, timeForAMine);
+//    }
     
 //    @Test
 //    public void winningTheGame() {
