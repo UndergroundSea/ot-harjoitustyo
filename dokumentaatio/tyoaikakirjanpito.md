@@ -7,5 +7,6 @@ Päivä	Aika	mitä tein
 5.4	2	Luokkakaavion tekeminen, ReadMe:n ja muiden tiedostojen siistiminen, sekä uusien testien tekeminen.
 8.4	3	Checkstylen käyttöönotto ja sen virheiden korjaaminen, sekä uusien testien tekeminen. Sekvenssikaavion tekeminen.
 9.4 1 Uusien testien tekeminen.
+14.4 3 Lisätty toiminnallisuus, joka kääntää monta ruutua kerrallaan jos käännetään ruutu, jonka vieressä ei ole yhtäkään miinaa. Lisätty myös nappi, joka aloittaa uuden pelin siitä painaessa.
 
 yhteensä 14
