@@ -1,4 +1,4 @@
-*Ohjelmistotekniikka, harjoitustyö*
+**Ohjelmistotekniikka, harjoitustyö**
 
 [työaikakirjanpito](https://github.com/UndergroundSea/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 
