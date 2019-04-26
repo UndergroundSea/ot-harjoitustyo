@@ -8,6 +8,10 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Font;
 
+/**
+ * Metodi luo peliasetukset, joiden ansiosta pelin vaikeusasteen pystyy muuttamaan.
+ * Luokalla on myös metodi, joka luo pelikentän. 
+ */
 public class GameMode {
    
     private int x;
@@ -40,6 +44,11 @@ public class GameMode {
         return this.name;
     }
    
+    /**
+     * Metodi luo pelikentän parametrina annetulle pohjalle luokan asetusten perusteella.
+     * 
+     * @param layout Pohja jolle pelikenttä luodaan.
+     */
     public void createGame(BorderPane layout) {
         MineField minefield = new MineField(this.x, this.y);
 

@@ -12,8 +12,18 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import minesweeper.GameMode;
 
+/**
+ * Sovelluksen graafinen käyttöliittymä
+ */
 public class UserInterface extends Application {
 
+    /**
+     * Luo sovelluksen aloitusnäkymän, josta voi valita pelin vaikeusasteen.
+     * 
+     * @param stage Paikka johon aloitusnäkymä tulee esille.
+     * 
+     * @throws Exception Virhetilanteessa annetaan Javan hoitaa homma.
+     */
     @Override
     public void start(Stage stage) throws Exception {
        
@@ -77,11 +87,6 @@ public class UserInterface extends Application {
         gameModes.getChildren().addAll(easyMode, mediumMode, hardMode, insaneMode);
 
        starting.setCenter(gameModes);
-
-
-//        medium.createGame(layout);
-       
-       
 
         Scene outlook = new Scene(starting);
 

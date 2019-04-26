@@ -1,7 +1,9 @@
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
+import minesweeper.GameMode;
 import minesweeper.MineField;
 import minesweeper.Pane;
 import org.junit.After;
@@ -19,6 +21,8 @@ public class NewEmptyJUnitTest {
     GridPane grid;
     Pane pane;
     Button button;
+    BorderPane layout;
+    GameMode easy;
     
     public NewEmptyJUnitTest() {
     }
@@ -34,6 +38,7 @@ public class NewEmptyJUnitTest {
     public void setUp() {
         minefield = new MineField(10, 5);
         pane = new Pane(0, 0, button);
+        easy = new GameMode(10, 5, 7, "Helppo");
 //        gameState.setText("Hi hi hiii, kutittaa! Voitit pelin!");
 //        minefield.setPane(pane, 0, 0);
         
@@ -91,6 +96,11 @@ public class NewEmptyJUnitTest {
     public void settingAndGettingValue() {
         pane.setValue(4);
         assertEquals(4, pane.getValue());
+    }
+    
+    @Test
+    public void ammountOfMines() {
+        assertEquals(7, easy.getMines());
     }
     
     
