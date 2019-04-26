@@ -18,6 +18,6 @@ Päivä	  Aika  	mitä tein
 
 25.4    2       Lisätty uuseita eri vaikeusasteita pelille.
 
-26.4    1       Lisää pelin vaikeustason muuttamisesta.
+26.4    2       Pelin vaikeustason muuttaminen tehty loppuun.
 
-yhteensä 20
+yhteensä 21
