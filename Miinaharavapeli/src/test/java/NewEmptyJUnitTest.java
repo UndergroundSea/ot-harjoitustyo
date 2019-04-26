@@ -11,10 +11,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-/**
- *
- * @author ebingerv
- */
+
 public class NewEmptyJUnitTest {
     
     MineField minefield;
@@ -95,6 +92,17 @@ public class NewEmptyJUnitTest {
         pane.setValue(4);
         assertEquals(4, pane.getValue());
     }
+    
+    
+    
+
+
+
+
+
+    
+    
+    
     
 //    @Test
 //    public void placingButtons() {
