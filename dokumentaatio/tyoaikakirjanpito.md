@@ -18,6 +18,6 @@ Päivä	  Aika  	mitä tein
 
 25.4    2       Lisätty uuseita eri vaikeusasteita pelille.
 
-26.4    3       Pelin vaikeustason muuttaminen tehty loppuun. Jar-tiedoston tekeminen.
+26.4    3       Pelin vaikeustason muuttaminen tehty loppuun. Jar-tiedoston ja release:n luominen.
 
 yhteensä 22
