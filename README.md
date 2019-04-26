@@ -7,3 +7,5 @@
 [arkkitehtuuri](https://github.com/UndergroundSea/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
 [GitHub-release](https://github.com/UndergroundSea/ot-harjoitustyo/releases/tag/viikko6)
+
+[Ohjelman kuvaus](https://github.com/UndergroundSea/ot-harjoitustyo/blob/master/dokumentaatio/kuvaus.md)
