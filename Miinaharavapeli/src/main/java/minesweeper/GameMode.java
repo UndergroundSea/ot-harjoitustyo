@@ -67,8 +67,6 @@ public class GameMode {
         settingButtons.getChildren().addAll(turn, bewareMine);
        
         Button newGame = new Button("Uusi peli");
-       
-//        BorderPane layout = new BorderPane();
                
         layout.setRight(newGame);
 
