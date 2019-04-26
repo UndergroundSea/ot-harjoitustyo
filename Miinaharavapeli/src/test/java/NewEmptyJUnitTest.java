@@ -74,7 +74,7 @@ public class NewEmptyJUnitTest {
 //    
     @Test
     public void placeMines() {
-        minefield.placeMines();
+        minefield.placeMines(7, 10, 5);
         assertEquals(7, minefield.getMines().size());       
     }
     
