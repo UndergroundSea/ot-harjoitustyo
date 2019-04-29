@@ -20,4 +20,6 @@ Päivä	  Aika  	mitä tein
 
 26.4    4       Pelin vaikeustason muuttaminen tehty loppuun. Jar-tiedoston ja release:n luominen. Lisää testejä. JavaDoc aloitettu.
 
-yhteensä 23
+29.4    2       Toiminnallisuus, joka mahdollistaa pelin vaikeustason muuttamisen uuden pelin yhteydessä. Uusi luokka hoitamaan aloitusnäkymää.
+
+yhteensä 26
