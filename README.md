@@ -23,3 +23,4 @@ Checkstyle (target/site/checkstyle.html): mvn jxr:jxr checkstyle:checkstyle
 
 .jar-tiedoston muodostaminen (/target): mvn package
 
+JavaDocin generoiminen (/target/site/apidocs/): mvn javadoc:javadoc
