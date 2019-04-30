@@ -39,31 +39,14 @@ public class NewEmptyJUnitTest {
         minefield = new MineField(10, 5);
         pane = new Pane(0, 0, button);
         easy = new GameMode(10, 5, 7, "Helppo");
-//        gameState.setText("Hi hi hiii, kutittaa! Voitit pelin!");
-//        minefield.setPane(pane, 0, 0);
-        
     }
     
     @After
     public void tearDown() {
     }
 
-//     TODO add test methods here.
-//     The methods must be annotated with annotation @Test. For example:
-    
-//     @Test
-//     public void hello() {}
-     
-//     @Test
-//     public void setAndGetValue() {
-////         Pane pane = new Pane(10, 1, new Button("miina"));
-//         pane.setMine(true);
-//         assertEquals(true, pane.getMine());
-//     }
-    
     @Test
     public void endTheGame() {
-//        MineField minefield = new MineField(10, 5);
         minefield.endGame();
         assertEquals(false, minefield.getAlive());
     }
@@ -73,7 +56,7 @@ public class NewEmptyJUnitTest {
         minefield.addTurnedPane();
         assertEquals(1, minefield.getTurnedPanes());
     }
-//    
+    
     @Test
     public void placeMines() {
         minefield.placeMines(7, 10, 5);
@@ -104,33 +87,6 @@ public class NewEmptyJUnitTest {
     }
     
     
-    
-
-
-
-
-
-    
-    
-    
-    
-//    @Test
-//    public void placingButtons() {
-//        minefield.placeButtons(grid, gameState);
-//        assertEquals(50, timeForAMine);
-//    }
-    
-//    @Test
-//    public void winningTheGame() {
-//        Label gameState = new Label("Varo miinoja!");
-//        for (int i = 0; i < 42; i++) {
-//            minefield.addTurnedPane();
-//        }
-//        pane.turnPane(minefield, gameState);
-//        assertEquals("Hi hi hiii, kutittaa! Voitit pelin!", gameState.getText());
-//    }
-    
-//    kortti.lataaRahaa(100);
-//        assertEquals("saldo: 1.10", kortti.toString());
+      
     
 }
