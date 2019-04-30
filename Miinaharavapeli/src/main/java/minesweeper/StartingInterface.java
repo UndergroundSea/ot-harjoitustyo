@@ -75,7 +75,6 @@ public class StartingInterface {
     
     public void setOnAction(Stage stage) {
         BorderPane gameField = new BorderPane();
-//        Scene outlook = new Scene(gameField);
         
         this.easyMode.setOnAction((event) -> {
             this.easy.createGame(stage);

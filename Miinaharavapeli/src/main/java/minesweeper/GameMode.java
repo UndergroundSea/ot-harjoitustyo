@@ -109,7 +109,6 @@ public class GameMode {
 
         this.layout.setBottom(grid);
         
-//        Scene outlook = new Scene(layout);
     }
    
 }

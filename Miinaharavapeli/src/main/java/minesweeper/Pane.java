@@ -124,7 +124,6 @@ public class Pane {
 
             this.turnZeroPane(minefield, gameState, this, this.button, x, y, mines);
 
-//            this.turnSafePane(minefield, gameState);
         } else {
             this.turnSafePane(minefield, gameState, x, y, mines);
         }
