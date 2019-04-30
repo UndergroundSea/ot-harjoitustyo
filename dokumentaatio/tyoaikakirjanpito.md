@@ -22,4 +22,6 @@ Päivä	  Aika  	mitä tein
 
 29.4    2       Toiminnallisuus, joka mahdollistaa pelin vaikeustason muuttamisen uuden pelin yhteydessä. Uusi luokka hoitamaan aloitusnäkymää.
 
-yhteensä 26
+30.4    1       Ohjelman koodin siistiminen.
+
+yhteensä 27
