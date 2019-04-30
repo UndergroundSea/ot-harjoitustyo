@@ -82,16 +82,9 @@ public class GameMode {
         this.layout.setPadding(new Insets(10, 70, 10, 10));
 
         GridPane grid = new GridPane();
-        grid.setHgap(10);
-        grid.setVgap(10);
-        grid.setPadding(new Insets(20, 0, 50, 50));
-
-        newGame.setOnAction((event) -> {
-            minefield.startGame(grid, gameState, this.x, this.y, this.mines, this.name);
-            StartingInterface newGameInterface = new StartingInterface();
-            Scene outlook = new Scene(newGameInterface.getStartingView());
-            newGameInterface.createStartingInterface(stage, outlook);
-        });
+        this.setGridPaneSize(grid);
+        
+        this.setNewGameOnAction(newGame, minefield, grid, gameState, stage);
 
         minefield.placeMines(this.mines, this.x, this.y);
         minefield.placeButtons(grid, gameState, this.x, this.y, this.mines);
@@ -115,6 +108,21 @@ public class GameMode {
         this.bewareMine.setOnAction((event) -> {
             minefield.setTurning(false);
         });
+    }
+    
+    public void setNewGameOnAction(Button button, MineField minefield, GridPane grid, Label gameState, Stage stage) {
+        button.setOnAction((event) -> {
+            minefield.startGame(grid, gameState, this.x, this.y, this.mines, this.name);
+            StartingInterface newGameInterface = new StartingInterface();
+            Scene outlook = new Scene(newGameInterface.getStartingView());
+            newGameInterface.createStartingInterface(stage, outlook);
+        });
+    }
+    
+    public void setGridPaneSize(GridPane grid) {
+        grid.setHgap(10);
+        grid.setVgap(10);
+        grid.setPadding(new Insets(20, 0, 50, 50));
     }
 
 }
