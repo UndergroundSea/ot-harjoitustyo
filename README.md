@@ -13,6 +13,8 @@
 
 [Ohjelman kuvaus](https://github.com/UndergroundSea/ot-harjoitustyo/blob/master/dokumentaatio/kuvaus.md)
 
+[Käyttöohje](https://github.com/UndergroundSea/ot-harjoitustyo/blob/master/dokumentaatio/kaytto-ohje.md)
+
 
 
 Testien ajaminen: mvn test
