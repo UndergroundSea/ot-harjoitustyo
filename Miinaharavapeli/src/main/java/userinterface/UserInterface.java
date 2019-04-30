@@ -39,6 +39,11 @@ public class UserInterface extends Application {
 
     }
 
+    /**
+     * Main-metodi.
+     * 
+     * @param args Main-metodin parametri.
+     */
     public static void main(String[] args) {
         launch(UserInterface.class);
     }

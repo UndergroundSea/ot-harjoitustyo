@@ -9,6 +9,9 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+/**
+ * Luokka, joka hallinnoi pelin aloitusnäkymää.
+ */
 public class StartingInterface {
 
     private GameMode easy;
@@ -33,6 +36,12 @@ public class StartingInterface {
         startingView = new BorderPane();
     }
 
+    /**
+     * Metodi luo aloitusnäkymän, josta voi valita pelin vaikeusasteen.
+     * 
+     * @param stage Näyttö jolla peli näytetään.
+     * @param outlook Kuva, joka näytetään näytöllä.
+     */
     public void createStartingInterface(Stage stage, Scene outlook) {
 
         HBox gameModes = new HBox();
@@ -64,6 +73,11 @@ public class StartingInterface {
         return this.startingView;
     }
 
+    /**
+     * Metodi asettaa kaikille aloitusnäytön painikkeille toiminnallisuudet.
+     * 
+     * @param stage Näyttö jolla peli näytetään.
+     */
     public void setOnAction(Stage stage) {
         BorderPane gameField = new BorderPane();
 
@@ -73,6 +87,13 @@ public class StartingInterface {
         this.setButtonOnAction(this.insaneMode, insane, stage);
     }
 
+    /**
+     * Metodi asettaa painikkeelle toiminnallisuuden, joka luo pelikentän metodille annettujen parametrien mukaan.
+     * 
+     * @param button Painike, jolle toiminnallisuus tehdään.
+     * @param gamemode Peliasetus, jonka mukaan luodaan pelikenttä painikkeesta painaessa.
+     * @param stage Näyttö jolla peli näytetään.
+     */
     public void setButtonOnAction(Button button, GameMode gamemode, Stage stage) {
         button.setOnAction((event) -> {
             gamemode.createGame(stage);
@@ -81,12 +102,20 @@ public class StartingInterface {
         });
     }
 
+    /**
+     * Metodi asettaa neljälle painikkeelle tietyn koon.
+     * 
+     * @param first Ensimmäinen painike, jolle koko asetetaan.
+     * @param second toinen painike, jolle koko asetetaan.
+     * @param third kolmas painike, jolle koko asetetaan.
+     * @param fourth neljäs painike, jolle koko asetetaan.
+     */
     public void setNormalSize(Button first, Button second, Button third, Button fourth) {
         first.setPrefWidth(125);
         second.setPrefWidth(125);
         third.setPrefWidth(125);
         fourth.setPrefWidth(125);
-
+ 
         first.setPrefHeight(35);
         second.setPrefHeight(35);
         third.setPrefHeight(35);

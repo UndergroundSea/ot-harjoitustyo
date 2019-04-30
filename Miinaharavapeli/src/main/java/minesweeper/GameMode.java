@@ -56,10 +56,9 @@ public class GameMode {
     }
 
     /**
-     * Metodi luo pelikentän parametrina annetulle pohjalle luokan asetusten
-     * perusteella.
+     * Metodi luo pelikentän, luokan asetusten perusteella.
      *
-     * @param layout Pohja jolle pelikenttä luodaan.
+     * @param stage Näyttö jolla peli näytetään.
      */
     public void createGame(Stage stage) {
         MineField minefield = new MineField(this.x, this.y);
@@ -93,6 +92,11 @@ public class GameMode {
 
     }
 
+    /**
+     * Metodi asettaa painikkeet toimintoineen, joilla päätetään halutaanko kääntää ruutu, vai merkata miina.
+     * 
+     * @param minefield Miinakenttä, jolle nämä painikkeet luodaan.
+     */
     public void setButtons(MineField minefield) {
         this.settingButtons = new HBox(10);
         this.settingButtons.setPadding(new Insets(30, 50, 20, 50));
@@ -110,6 +114,15 @@ public class GameMode {
         });
     }
     
+    /**
+     * Metodi asettaa toiminnon painikkeelle, joka luo uuden pelin.
+     * 
+     * @param button Painike, josta painamalla uusi peli luodaan.
+     * @param minefield Miinakenttä, jolle luodaan uusi peli.
+     * @param grid Pelikentän ruudukko.
+     * @param gameState Pelitilanteen teksti.
+     * @param stage Näyttö jolla peli näytetään.
+     */
     public void setNewGameOnAction(Button button, MineField minefield, GridPane grid, Label gameState, Stage stage) {
         button.setOnAction((event) -> {
             minefield.startGame(grid, gameState, this.x, this.y, this.mines, this.name);
@@ -119,6 +132,11 @@ public class GameMode {
         });
     }
     
+    /**
+     * Asettaa oikean koon ruudukolle.
+     * 
+     * @param grid Ruudukko, jolle koko asetetaan.
+     */
     public void setGridPaneSize(GridPane grid) {
         grid.setHgap(10);
         grid.setVgap(10);

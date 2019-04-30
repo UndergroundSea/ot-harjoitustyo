@@ -6,6 +6,9 @@ import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 
+/**
+ * Luokka, joka hallinoi miinakentän ruutuja, eli painikkeita.
+ */
 public class Pane {
 
     private int x;
@@ -58,6 +61,11 @@ public class Pane {
         this.color = color;
     }
 
+    /**
+     * Metodi asettaa ruudulle tekstin väriksi värin parametrina annetun miinojen määrän mukaan.
+     * 
+     * @param mines Miinojen määrä, joka määrittää ruudun värin.
+     */
     public void setColor(int mines) {
         if (mines == 0) {
             this.setColor(Color.WHITE);
@@ -80,6 +88,9 @@ public class Pane {
         return this.button;
     }
 
+    /**
+     * Asettaa ruudun asetukset käännetyiksi, jolloin sille pätee erilaiset toiminnallisuudet.
+     */
     public void turn() {
         this.turned = true;
     }
@@ -88,6 +99,9 @@ public class Pane {
         return this.turned;
     }
 
+    /**
+     * Asettaa ruudun, jonka ympärillä ei ole miinaa, asetukset käännetyiksi, jolloin sille pätee erilaiset toiminnallisuudet.
+     */
     public void zeroTurn() {
         this.zeroTurned = true;
     }
@@ -96,6 +110,15 @@ public class Pane {
         return this.zeroTurned;
     }
 
+    /**
+     * Asettaa ruudulle toiminnallisuuksia siitä painaessa. Jos tarpeeksi monta ruutua on käännetty, peli voitetaan.
+     * 
+     * @param minefield Miinakenttä, jossa ruutu on.
+     * @param gameState Teksti, joka kertoo pelin tilanteen.
+     * @param x Ruudun x-kordinaatti ruudukossa.
+     * @param y Ruudun y-kordinaatti ruudukossa.
+     * @param mines Miinojen määrä kyseisessä pelissä.
+     */
     public void setOnAction(MineField minefield, Label gameState, int x, int y, int mines) {
         button.setOnAction((event) -> {
             if (minefield.getTurning()) {
@@ -114,6 +137,15 @@ public class Pane {
         });
     }
 
+    /**
+     * Metodi kääntää ruudun.
+     * 
+     * @param minefield Miinakenttä, jossa ruutu sijaitsee.
+     * @param gameState Pelitilanteen teksti.
+     * @param x Miinakentän pituus.
+     * @param y Miinakentän leveys.
+     * @param mines Miinojen määrä miinakentässä.
+     */
     public void turnPane(MineField minefield, Label gameState, int x, int y, int mines) {
         if (this.getMine()) {
             minefield.endGame();
@@ -129,7 +161,17 @@ public class Pane {
         }
     }
 
-
+    /**
+     * Metodi kääntää ruudun, jonka ympärillä ei ole yhtäkään miinaa.
+     * 
+     * @param minefield Miinakenttä, jossa ruutu sijaitsee.
+     * @param gameState Pelitilanteen teksti.
+     * @param pane Ruutu, joka käännetään.
+     * @param button Käännettävän ruudun nappi.
+     * @param length Miinakentän pituus.
+     * @param large Miinakentän leveys.
+     * @param mines Miinojen määrä.
+     */
     public void turnZeroPane(MineField minefield, Label gameState, Pane pane, Button button, int length, int large, int mines) {
         if (minefield.countValue(pane, length, large) == 0) {
             pane.zeroTurn();
@@ -150,6 +192,17 @@ public class Pane {
         }
     }    
 
+    /**
+     * Metodi kääntää ruudun ympärillä olevat ruudut, joiden ympärillä ei ole yhtäkään miinaa.
+     * 
+     * @param minefield Miinakenttä, jossa ruutu on.
+     * @param gameState Pelitilanteen teksti.
+     * @param pane Ruutu, jonka ympärillä käännettävät ruudut ovat.
+     * @param button Sen ruudun nappi.
+     * @param length Miinakentän pituus.
+     * @param large Miinakentän leveys.
+     * @param mines Miinojen määrä miinakentässä.
+     */
     public void turnAll(MineField minefield, Label gameState, Pane pane, Button button, int length, int large, int mines) {
         for (int i = pane.getX() - 1; i < pane.getX() + 2; i++) {
             for (int j = pane.getY() - 1; j < pane.getY() + 2; j++) {
@@ -161,6 +214,17 @@ public class Pane {
         }
     }
 
+    /**
+     * Metodi kääntää ruudun, jossa ei ole miinaa.
+     * 
+     * @param minefield Miinakenttä, jossa ruutu sijaitsee.
+     * @param gameState Pelitilanteen teksti.
+     * @param pane Ruutu, joka käännetään.
+     * @param button Käännettävän ruudun nappi.
+     * @param x Miinakentän pituus.
+     * @param y Miinakentän leveys.
+     * @param mines Miinakentän miinojen määrä.
+     */
     public void turnSafePane(MineField minefield, Label gameState, Pane pane, Button button, int x, int y, int mines) {
         int win = (x * y) - mines;
         button.setText(Integer.toString(minefield.countValue(pane, x, y)));
@@ -175,6 +239,15 @@ public class Pane {
         }
     }
 
+    /**
+     * Metodi kääntää ruudun, jossa ei ole miinaa.
+     * 
+     * @param minefield Miinakenttä, jossa ruutu sijaitsee.
+     * @param gameState Pelitilanteen teksti.
+     * @param length Miinakentän pituus.
+     * @param large Miinakentän leveys.
+     * @param mines Miinakentän miinojen määrä.
+     */
     public void turnSafePane(MineField minefield, Label gameState, int length, int large, int mines) {
         int win = (length * large) - mines;
         this.button.setText(Integer.toString(minefield.countValue(this, length, large)));

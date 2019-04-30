@@ -8,6 +8,9 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 
+/**
+ * Luokka, joka hallinnoi pelikenttää pelin aikana.
+ */
 public class MineField {
 
     private Pane[][] grid;
@@ -34,6 +37,9 @@ public class MineField {
         return grid[x][y];
     }
 
+    /**
+     * Metodi asettaa pelin päättyneeksi, jolloin osaa toiminnallisuuksista ei voida enää suorittaa.
+     */
     public void endGame() {
         this.alive = false;
     }
@@ -46,6 +52,9 @@ public class MineField {
         return this.mines;
     }
 
+    /**
+     * Metodi kasvattaa yhdellä "turnedPanes"-laskuria, joka laskee käännettyjen ruutujen määrän ilmoittaakseen milloin peli päättyy.
+     */
     public void addTurnedPane() {
         this.turnedPanes++;
     }
@@ -66,6 +75,14 @@ public class MineField {
         return this.turning;
     }
 
+    /**
+     * Metodi laskee ja palauttaa ruudun ympärillä olevien miinojen määrän ja asettaa ruudulle senmukaisen värin.
+     * 
+     * @param pane Ruutu, jonka ympäristö lasketaan.
+     * @param length Miinakentän pituus.
+     * @param large Miinakentän leveys.
+     * @return Palauttaa ruudun ympärillä olevien miinojen määrän.
+     */
     public int countValue(Pane pane, int length, int large) {
         int x = pane.getX();
         int y = pane.getY();
@@ -89,6 +106,13 @@ public class MineField {
 
     }
 
+    /**
+     * Asettaa joillekin sattumanvaraisille ruutuja vastaaville luvuille miinat.
+     * 
+     * @param ammount Miinojen määrä.
+     * @param x Miinakentän pituus.
+     * @param y  Miinakentän leveys.
+     */
     public void placeMines(int ammount, int x, int y) {
         int mines = 0;
         Random random = new Random();
@@ -103,6 +127,15 @@ public class MineField {
         }
     }
 
+    /**
+     * Metodi asettaa miinakentän ruudut eli painikkeet, sekä niiden toiminnot.
+     * 
+     * @param grid Ruudukko, jolle ruudut asetetaan.
+     * @param gameState Kuvausteksti pelin tilanteesta.
+     * @param length Miinakentän pituus.
+     * @param large Miinakentän leveys.
+     * @param mines Miinojen määrä.
+     */
     public void placeButtons(GridPane grid, Label gameState, int length, int large, int mines) {
         int timeForAMine = 0;
 
@@ -129,6 +162,16 @@ public class MineField {
         }
     }
 
+    /**
+     * Metodi muuttaa miinakentän asetukset valmiiksi uutta peliä varten.
+     * 
+     * @param grid Ruudukko, jossa peli tapahtui.
+     * @param gameState Teksti pelin tilanteesta.
+     * @param x Pelikentän pituus.
+     * @param y Pelikentän leveys.
+     * @param ammount Miinojen määrä.
+     * @param name Pelin vaikeusasteen nimi.
+     */
     public void startGame(GridPane grid, Label gameState, int x, int y, int ammount, String name) {
         gameState.setText("Varo miinoja! // " + name);
         this.grid = new Pane[x][y];
