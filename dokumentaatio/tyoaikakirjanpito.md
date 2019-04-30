@@ -22,6 +22,6 @@ Päivä	  Aika  	mitä tein
 
 29.4    2       Toiminnallisuus, joka mahdollistaa pelin vaikeustason muuttamisen uuden pelin yhteydessä. Uusi luokka hoitamaan aloitusnäkymää.
 
-30.4    1       Ohjelman koodin siistiminen.
+30.4    2       Ohjelman koodin siistiminen. JavaDocin tekeminen.
 
-yhteensä 27
+yhteensä 28
