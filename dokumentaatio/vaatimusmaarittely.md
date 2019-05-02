@@ -1,8 +1,8 @@
 **Miinaharava**
 
-**Sovelluksen tarkoitus**
-
 --------------------------------------------
+
+**Sovelluksen tarkoitus**
 
 -Sovellus on miinaharava-peli. Pelissääytyy etsiä kaikki ruudut, joissa ei ole miinaa. Vinkkiä miinattomien ruutujen löytämiseen saa käännetyistä ruuduista, joissa lukee kuinka monta miinaa lähistöllä on.
 
