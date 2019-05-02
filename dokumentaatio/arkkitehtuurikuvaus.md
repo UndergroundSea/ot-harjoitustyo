@@ -16,3 +16,4 @@ Pakkauksen userinterface luokka UserInterface luo aloitusnäkymä-olion ja sille
 
 //gamesettings-pakkauksen luokat StartingInterface ja GameMode tukevat luokkaa UserInterface käyttöliittymätoiminnassa. Luokka StartingInterface auttaa luomaan aloitusnäkymää ja asettaa toiminnallisuudet napeille, joista voi päättää pelin vaikeusasteen.Luokka
 //Ehkä tulee erikseen, koska eri pakkaus
+//rIIPPUU ARKITEHTUURIKUVAUKSEN OTSIKOIDEN MÄÄRÄSTÄ
