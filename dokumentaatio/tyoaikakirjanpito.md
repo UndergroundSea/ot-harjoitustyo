@@ -24,4 +24,6 @@ Päivä	  Aika  	mitä tein
 
 30.4    3       Ohjelman koodin siistiminen. JavaDocin tekeminen. Jar-tiedoston tekeminen, releasen tekeminen, sekä käyttöohjeen aloittaminen.
 
-yhteensä 29
+2.5     2       Käyttöohjeen viimeistely. Vaatimusmäärittelyn päivittäminen. Arkkitehtuurikuvauksen aloittaminen.
+
+yhteensä 31
