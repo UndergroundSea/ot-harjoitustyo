@@ -2,6 +2,7 @@
 
 **Miinaharava-peli**
 
+---------------------------------
 
 [työaikakirjanpito](https://github.com/UndergroundSea/ot-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 
