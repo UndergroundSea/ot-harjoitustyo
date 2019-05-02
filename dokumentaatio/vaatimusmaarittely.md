@@ -2,7 +2,11 @@
 
 **Sovelluksen tarkoitus**
 
+--------------------------------------------
+
 -Sovellus on miinaharava-peli. Pelissääytyy etsiä kaikki ruudut, joissa ei ole miinaa. Vinkkiä miinattomien ruutujen löytämiseen saa käännetyistä ruuduista, joissa lukee kuinka monta miinaa lähistöllä on.
+
+--------------------------------------------
 
 **Käyttöliittymä**
 
@@ -11,6 +15,8 @@
 -Jokainen vaikeustaso käynnistää saman pelin, mutta erikokoisella kentällä ja eri määrällä miinoja.
 
 -Pelinäkymissä, aluksi, kaikki ruudut ovat "kuvapuoli alaspäin" ja ne saa "käännettyä" klikkaamalla niitä silloin kuin "käännä"-asetus on päällä. "Käännä"-asetuksen voi muuttaa "miina"-asetukseksi pelikentän vasemmassa ylälaidassa sijaitsevasta napista ja toisesta napista takaisin "käännä"-asetukseen. Kun "miina"-asetus on päällä, ruutua klikatessa syntyy siihen rasti muistutukseksi siitä, että arvioi siinä olevan miina.
+
+--------------------------------------------
 
 **Toiminnallisuudet**
 
