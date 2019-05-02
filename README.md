@@ -1,5 +1,7 @@
 **Ohjelmistotekniikka, harjoitustyö**
 
+--------------------------------------------
+
 **Miinaharava-peli**
 
 ---------------------------------
