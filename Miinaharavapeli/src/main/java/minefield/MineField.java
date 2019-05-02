@@ -1,5 +1,5 @@
 
-package minesweeper;
+package minefield;
 
 import java.util.ArrayList;
 import java.util.Random;

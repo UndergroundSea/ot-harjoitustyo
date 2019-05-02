@@ -1,4 +1,4 @@
-package minesweeper;
+package gamesetting;
 
 import javafx.geometry.Insets;
 import javafx.scene.Scene;

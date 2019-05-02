@@ -10,7 +10,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import minesweeper.StartingInterface;
+import gamesetting.StartingInterface;
 
 /**
  * Sovelluksen graafinen käyttöliittymä
@@ -28,8 +28,6 @@ public class UserInterface extends Application {
     public void start(Stage stage) throws Exception {
 
         StartingInterface start = new StartingInterface();
-              
-        BorderPane layout = new BorderPane();
                 
         Scene outlook = new Scene(start.getStartingView());
         
