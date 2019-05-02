@@ -27,3 +27,5 @@
 -Kun nollan sisältävän ruudun vieressä oleva ruutu kääntyy, myös nollan sisältävä ruutu kääntyy.
 
 -Tyhjään ruutuun voi pistää rastin kun "miina"-asetus on päällä, jos epäilee siinä olevan miina.
+
+-Pelikentän oikeassa yläkulmassa on nappi, josta painamalla saa aloitettua uuden pelin ja valittua sille uuden vaikeusasteen.
