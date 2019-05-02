@@ -15,6 +15,8 @@
 
 [Käyttöohje](https://github.com/UndergroundSea/ot-harjoitustyo/blob/master/dokumentaatio/kaytto-ohje.md)
 
+[Arkkitehtuurikuvaus](https://github.com/UndergroundSea/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuurikuvaus.md)
+
 
 
 Testien ajaminen: mvn test
