@@ -13,5 +13,6 @@ Ohjelma sisältää kolme pakkausta. Pakkaus userinterface sisältää pelkän g
 
 Pakkauksen userinterface luokka UserInterface luo aloitusnäkymä-olion ja sille scenen, johon sitten tämä aloitusnäkymä luodaan.
 Luokka UserInterface luo tämän aloitusnäkymän luokan StartingInterface kautta. Kun aloitusnäkymästä vaihdetaan pelinäkymään, pelinäkymä luodaan luokan gameMode kautta.
-[Käyttöliittymäkuvaus](https://github.com/UndergroundSea/ot-harjoitustyo/blob/master/dokumentaatio/UserInterface.png)
-![Hieno kuvau](https://github.com/UndergroundSea/ot-harjoitustyo/blob/master/dokumentaatio/UserInterface.png)
+![Käyttöliittymäkuvaus](https://github.com/UndergroundSea/ot-harjoitustyo/blob/master/dokumentaatio/UserInterface.png)
+
+-----------------------------------------------
