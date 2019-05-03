@@ -8,7 +8,7 @@
 
 [Vaatimusmäärittely](https://github.com/UndergroundSea/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
-[GitHub-release](https://github.com/UndergroundSea/ot-harjoitustyo/releases/tag/viikko6)
+[GitHub-release](https://github.com/UndergroundSea/ot-harjoitustyo/releases/tag/Viikko7)
 
 [Käyttöohje](https://github.com/UndergroundSea/ot-harjoitustyo/blob/master/dokumentaatio/kaytto-ohje.md)
 
