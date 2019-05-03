@@ -26,6 +26,6 @@ Päivä	  Aika  	mitä tein
 
 2.5     3       Käyttöohjeen viimeistely. Vaatimusmäärittelyn päivittäminen. Arkkitehtuurikuvauksen aloittaminen.
 
-3.5     1       Tallennusmetodin tekemisen yrittäminen. Arkkitehtuurikuvauksen jatkaminen.
+3.5     3       Tallennusmetodin tekemisen. Arkkitehtuurikuvauksen jatkaminen. 
 
-yhteensä 33
+yhteensä 35
