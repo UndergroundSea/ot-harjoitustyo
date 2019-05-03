@@ -6,7 +6,7 @@ Lataa tiedosto [Miinaharavapeli.jar](https://github.com/UndergroundSea/ot-harjoi
 
 **Konfigurointi**
 
-Kummempaa konfigurointia ei tarvita.
+Ohjelman käynnistyshakemistossa täytyy olla tiedosto [save.txt](https://github.com/UndergroundSea/ot-harjoitustyo/blob/master/Miinaharavapeli/save.txt)
 
 --------------------------------------------
 
