@@ -1,6 +1,7 @@
 
 package minefield;
 
+import gamesetting.GameMode;
 import java.util.ArrayList;
 import java.util.Random;
 import javafx.scene.control.Button;
@@ -135,8 +136,9 @@ public class MineField {
      * @param length Miinakentän pituus.
      * @param large Miinakentän leveys.
      * @param mines Miinojen määrä.
+     * @param gamemode Valittu peliasetus.
      */
-    public void placeButtons(GridPane grid, Label gameState, int length, int large, int mines) {
+    public void placeButtons(GridPane grid, Label gameState, int length, int large, int mines, GameMode gamemode) {
         int timeForAMine = 0;
 
         for (int x = 0; x < length; x++) {
@@ -154,7 +156,7 @@ public class MineField {
                     pane.setMine(true);
                 }
 
-                pane.setOnAction(this, gameState, length, large, mines);
+                pane.setOnAction(this, gameState, length, large, mines, gamemode);
 
                 timeForAMine++;
 
@@ -171,8 +173,9 @@ public class MineField {
      * @param y Pelikentän leveys.
      * @param ammount Miinojen määrä.
      * @param name Pelin vaikeusasteen nimi.
+     * @param gamemode Valittu peliasetus.
      */
-    public void startGame(GridPane grid, Label gameState, int x, int y, int ammount, String name) {
+    public void startGame(GridPane grid, Label gameState, int x, int y, int ammount, String name, GameMode gamemode) {
         gameState.setText("Varo miinoja! // " + name);
         this.grid = new Pane[x][y];
         this.alive = true;
@@ -180,7 +183,7 @@ public class MineField {
         this.mines = new ArrayList<>();
         this.turning = true;
         this.placeMines(ammount, x, y);
-        this.placeButtons(grid, gameState, x, y, ammount);
+        this.placeButtons(grid, gameState, x, y, ammount, gamemode);
        
     }
 

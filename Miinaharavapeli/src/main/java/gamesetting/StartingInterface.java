@@ -1,5 +1,6 @@
 package gamesetting;
 
+import java.io.IOException;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -38,11 +39,12 @@ public class StartingInterface {
 
     /**
      * Metodi luo aloitusnäkymän, josta voi valita pelin vaikeusasteen.
-     * 
+     *
      * @param stage Näyttö jolla peli näytetään.
      * @param outlook Kuva, joka näytetään näytöllä.
+     * @throws java.io.IOException Jos tulee ongelma tiedoston kanssa.
      */
-    public void createStartingInterface(Stage stage, Scene outlook) {
+    public void createStartingInterface(Stage stage, Scene outlook) throws IOException {
 
         HBox gameModes = new HBox();
         VBox text = new VBox();
@@ -75,10 +77,11 @@ public class StartingInterface {
 
     /**
      * Metodi asettaa kaikille aloitusnäytön painikkeille toiminnallisuudet.
-     * 
+     *
      * @param stage Näyttö jolla peli näytetään.
+     * @throws java.io.IOException Jos tulee ongelma tiedoston kanssa.
      */
-    public void setOnAction(Stage stage) {
+    public void setOnAction(Stage stage) throws IOException {
         BorderPane gameField = new BorderPane();
 
         this.setButtonOnAction(this.easyMode, easy, stage);
@@ -88,23 +91,29 @@ public class StartingInterface {
     }
 
     /**
-     * Metodi asettaa painikkeelle toiminnallisuuden, joka luo pelikentän metodille annettujen parametrien mukaan.
-     * 
+     * Metodi asettaa painikkeelle toiminnallisuuden, joka luo pelikentän
+     * metodille annettujen parametrien mukaan.
+     *
      * @param button Painike, jolle toiminnallisuus tehdään.
-     * @param gamemode Peliasetus, jonka mukaan luodaan pelikenttä painikkeesta painaessa.
+     * @param gamemode Peliasetus, jonka mukaan luodaan pelikenttä painikkeesta
+     * painaessa.
      * @param stage Näyttö jolla peli näytetään.
      */
-    public void setButtonOnAction(Button button, GameMode gamemode, Stage stage) {
+    public void setButtonOnAction(Button button, GameMode gamemode, Stage stage){
         button.setOnAction((event) -> {
-            gamemode.createGame(stage);
-            Scene gameMode = new Scene(gamemode.getLayout());
-            stage.setScene(gameMode);
+            try {
+                gamemode.createGame(stage, gamemode);
+                Scene gameMode = new Scene(gamemode.getLayout());
+                stage.setScene(gameMode);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         });
     }
 
     /**
      * Metodi asettaa neljälle painikkeelle tietyn koon.
-     * 
+     *
      * @param first Ensimmäinen painike, jolle koko asetetaan.
      * @param second toinen painike, jolle koko asetetaan.
      * @param third kolmas painike, jolle koko asetetaan.
@@ -115,7 +124,7 @@ public class StartingInterface {
         second.setPrefWidth(125);
         third.setPrefWidth(125);
         fourth.setPrefWidth(125);
- 
+
         first.setPrefHeight(35);
         second.setPrefHeight(35);
         third.setPrefHeight(35);

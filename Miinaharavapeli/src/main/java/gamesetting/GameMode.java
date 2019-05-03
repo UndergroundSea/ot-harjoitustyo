@@ -66,11 +66,11 @@ public class GameMode {
     public BorderPane getLayout() {
         return this.layout;
     }
-    
+
     public int getGamesWon() {
         return this.gamesWon;
     }
-    
+
     public void setGamesWon(int i) {
         this.gamesWon = i;
     }
@@ -79,15 +79,17 @@ public class GameMode {
      * Metodi luo pelikentän, luokan asetusten perusteella.
      *
      * @param stage Näyttö jolla peli näytetään.
+     * @param gamemode Valittu peliasetus.
+     * @throws java.io.IOException Jos tulee ongelma tiedoston kanssa.
      */
-    public void createGame(Stage stage) {
+    public void createGame(Stage stage, GameMode gamemode) throws IOException {
         MineField minefield = new MineField(this.x, this.y);
 
         Font normalFont = Font.font(35);
-//        this.load(); 
+        this.load();
 
         Label gameState = new Label("Varo miinoja! // " + this.name);
-//        Label WinningRecord = new Label(Integer.toString(this.gamesWon));
+        Label WinningRecord = new Label(Integer.toString(this.gamesWon));
         gameState.setFont(normalFont);
         gameState.setPadding(new Insets(20, 50, 5, 50));
 
@@ -105,10 +107,10 @@ public class GameMode {
         GridPane grid = new GridPane();
         this.setGridPaneSize(grid);
 
-        this.setNewGameOnAction(newGame, minefield, grid, gameState, stage);
+        this.setNewGameOnAction(newGame, minefield, grid, gameState, stage, gamemode);
 
         minefield.placeMines(this.mines, this.x, this.y);
-        minefield.placeButtons(grid, gameState, this.x, this.y, this.mines);
+        minefield.placeButtons(grid, gameState, this.x, this.y, this.mines, gamemode);
 
         this.layout.setBottom(grid);
 
@@ -145,13 +147,18 @@ public class GameMode {
      * @param grid Pelikentän ruudukko.
      * @param gameState Pelitilanteen teksti.
      * @param stage Näyttö jolla peli näytetään.
+     * @param gamemode Valittu peliasetus.
      */
-    public void setNewGameOnAction(Button button, MineField minefield, GridPane grid, Label gameState, Stage stage) {
+    public void setNewGameOnAction(Button button, MineField minefield, GridPane grid, Label gameState, Stage stage, GameMode gamemode) {
         button.setOnAction((event) -> {
-            minefield.startGame(grid, gameState, this.x, this.y, this.mines, this.name);
-            StartingInterface newGameInterface = new StartingInterface();
-            Scene outlook = new Scene(newGameInterface.getStartingView());
-            newGameInterface.createStartingInterface(stage, outlook);
+            try {
+                minefield.startGame(grid, gameState, this.x, this.y, this.mines, this.name, gamemode);
+                StartingInterface newGameInterface = new StartingInterface();
+                Scene outlook = new Scene(newGameInterface.getStartingView());
+                newGameInterface.createStartingInterface(stage, outlook);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         });
     }
 
@@ -166,39 +173,49 @@ public class GameMode {
         grid.setPadding(new Insets(20, 0, 50, 50));
     }
 
-//    public void save() throws IOException {
-//        File file = new File("save.txt");
-//        FileWriter writer = null;
-//        try {
-//            writer = new FileWriter(file);
-//            writer.write(this.gamesWon);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        } finally {
-//            try {
-//                writer.close();
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//        }
-//    }
-//
-//    public void load() throws FileNotFoundException, IOException {
-//        InputStream input = new FileInputStream("save.txt");
-//        BufferedReader buf = new BufferedReader(new InputStreamReader(input));
-//
-//        String line = buf.readLine();
-//        StringBuilder builder = new StringBuilder();
-//        List<String> lines = new ArrayList<>();
-//        
-//        while (line != null) {
-//            lines.add(line);
-//            line = buf.readLine();
-//        }
-//        lines.forEach(l -> {
-//            System.out.println(l);
-//        });
-//        this.setGamesWon(Integer.parseInt(lines.get(0)));
-//    }
+    /**
+     * Tallentaa voitettujen pelien määrän.
+     * 
+     * @throws IOException Jos tulee ongelma tiedoston kanssa.
+     */
+    public void save() throws IOException {
+        File file = new File("save.txt");
+        FileWriter writer = null;
+        try {
+            writer = new FileWriter(file);
+            int winnings = this.gamesWon;
+            System.out.println(winnings);
+            writer.write(winnings + "\r\n");
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                writer.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    /**
+     * Lataa muistista voitettujen pelien määrän.
+     * 
+     * @throws FileNotFoundException Jos tiedostoa ei ole.
+     * @throws IOException Jos tulee ongelma tiedoston kanssa.
+     */
+    public void load() throws FileNotFoundException, IOException {
+        InputStream input = new FileInputStream("save.txt");
+        BufferedReader buf = new BufferedReader(new InputStreamReader(input));
+
+        String line = buf.readLine();
+        List<String> lines = new ArrayList<>();
+
+        while (line != null) {
+            lines.add(line);
+            line = buf.readLine();
+        }
+        
+        this.setGamesWon(Integer.parseInt(lines.get(0)));
+    }
 
 }
