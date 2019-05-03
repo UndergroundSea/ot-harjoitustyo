@@ -99,7 +99,7 @@ public class StartingInterface {
      * painaessa.
      * @param stage Näyttö jolla peli näytetään.
      */
-    public void setButtonOnAction(Button button, GameMode gamemode, Stage stage){
+    public void setButtonOnAction(Button button, GameMode gamemode, Stage stage) {
         button.setOnAction((event) -> {
             try {
                 gamemode.createGame(stage, gamemode);

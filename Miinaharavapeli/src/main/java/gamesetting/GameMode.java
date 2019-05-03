@@ -37,6 +37,9 @@ public class GameMode {
     private Button turn;
     private Button bewareMine;
     private int gamesWon;
+    private Label gameState;
+    private Label winningRecord;
+    private VBox labels;
 
     public GameMode(int x, int y, int mines, String name) {
 
@@ -86,17 +89,8 @@ public class GameMode {
     public void createGame(Stage stage, GameMode gamemode) throws IOException {
         MineField minefield = new MineField(this.x, this.y);
 
-        Font normalFont = Font.font(35);
         this.load();
-
-        Label gameState = new Label("Varo miinoja! // " + this.name);
-        Label winningRecord = new Label("Voitetut pelit: " + Integer.toString(this.gamesWon));
-        gameState.setFont(normalFont);
-        winningRecord.setFont(normalFont);
-        gameState.setPadding(new Insets(20, 50, 5, 50));
-        winningRecord.setPadding(new Insets(20, 50, 5, 50));
-        VBox labels = new VBox(5);
-        labels.getChildren().addAll(gameState, winningRecord);
+        this.createLabels();
 
         this.setButtons(minefield);
 
@@ -105,17 +99,17 @@ public class GameMode {
         Button newGame = new Button("Uusi peli");
 
         this.layout.setRight(newGame);
-        this.layout.setTop(labels);
+        this.layout.setTop(this.labels);
         this.layout.setCenter(settingButtons);
         this.layout.setPadding(new Insets(10, 70, 10, 10));
 
         GridPane grid = new GridPane();
         this.setGridPaneSize(grid);
 
-        this.setNewGameOnAction(newGame, minefield, grid, gameState, stage, gamemode);
+        this.setNewGameOnAction(newGame, minefield, grid, this.gameState, stage, gamemode);
 
         minefield.placeMines(this.mines, this.x, this.y);
-        minefield.placeButtons(grid, gameState, this.x, this.y, this.mines, gamemode);
+        minefield.placeButtons(grid, this.gameState, this.x, this.y, this.mines, gamemode);
 
         this.layout.setBottom(grid);
 
@@ -165,6 +159,21 @@ public class GameMode {
                 e.printStackTrace();
             }
         });
+    }
+    
+    /**
+     * Luo pelikentälle tekstit pelin tilasta, asetuksista ja voitetuista peleistä.
+     */
+    public void createLabels() {
+        Font normalFont = Font.font(35);
+        gameState = new Label("Varo miinoja! // " + this.name);
+        winningRecord = new Label("Voitetut pelit: " + Integer.toString(this.gamesWon));
+        gameState.setFont(normalFont);
+        winningRecord.setFont(normalFont);
+        gameState.setPadding(new Insets(20, 50, 5, 50));
+        winningRecord.setPadding(new Insets(20, 50, 5, 50));
+        this.labels = new VBox(5);
+        this.labels.getChildren().addAll(gameState, winningRecord);
     }
 
     /**
