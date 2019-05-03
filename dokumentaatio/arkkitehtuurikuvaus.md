@@ -16,3 +16,8 @@ Luokka UserInterface luo tämän aloitusnäkymän luokan StartingInterface kautt
 ![Käyttöliittymäkuvaus](https://github.com/UndergroundSea/ot-harjoitustyo/blob/master/dokumentaatio/UserInterface.png)
 
 -----------------------------------------------
+
+**Sovelluslogiikka**
+
+Varsinaisen sovelluslogiikan muodostavat sitten luokat MineField ja Pane, vaikka eivät nekään täysin eriytettyjä 
+![Sovelluslogiikkakuvaus](https://github.com/UndergroundSea/ot-harjoitustyo/blob/master/dokumentaatio/Sovelluslogiikka.png)
