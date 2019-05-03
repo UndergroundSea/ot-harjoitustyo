@@ -17,6 +17,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import minefield.MineField;
@@ -89,9 +90,13 @@ public class GameMode {
         this.load();
 
         Label gameState = new Label("Varo miinoja! // " + this.name);
-        Label WinningRecord = new Label(Integer.toString(this.gamesWon));
+        Label winningRecord = new Label("Voitetut pelit: " + Integer.toString(this.gamesWon));
         gameState.setFont(normalFont);
+        winningRecord.setFont(normalFont);
         gameState.setPadding(new Insets(20, 50, 5, 50));
+        winningRecord.setPadding(new Insets(20, 50, 5, 50));
+        VBox labels = new VBox(5);
+        labels.getChildren().addAll(gameState, winningRecord);
 
         this.setButtons(minefield);
 
@@ -100,7 +105,7 @@ public class GameMode {
         Button newGame = new Button("Uusi peli");
 
         this.layout.setRight(newGame);
-        this.layout.setTop(gameState);
+        this.layout.setTop(labels);
         this.layout.setCenter(settingButtons);
         this.layout.setPadding(new Insets(10, 70, 10, 10));
 
