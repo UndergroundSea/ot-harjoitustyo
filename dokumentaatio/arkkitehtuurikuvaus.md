@@ -36,6 +36,12 @@ Sovellus tallentaa voitettujen pelien määrän tiedostoon nimeltä save.txt . S
 
 *public void start*
 
-Metodi luo sovelluksen aloitusnäkymän, josta voi valita pelin vaikeustason.
+Metodi luo pääluokassa sovelluksen aloitusnäkymän, josta voi valita pelin vaikeustason.
 
 ![publicVoidStart](https://github.com/UndergroundSea/ot-harjoitustyo/blob/master/dokumentaatio/publicVoidStart.PNG)
+
+*public void create game*
+
+Metodi luo GameMode luokassa uuden pelin aloitusnäkymän valitun vaikeustason mukaisesti. Peli on sitten valmis pelattavaksi.
+
+![publicVoidCreateGame](https://github.com/UndergroundSea/ot-harjoitustyo/blob/master/dokumentaatio/publicVoidCreateGame.PNG)
