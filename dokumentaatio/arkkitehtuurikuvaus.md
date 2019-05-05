@@ -34,7 +34,7 @@ Sovellus tallentaa voitettujen pelien määrän tiedostoon nimeltä save.txt . S
 
 **Päätoiminnallisuudet**
 
-public void start
+*public void start*
 
 Metodi luo sovelluksen aloitusnäkymän, josta voi valita pelin vaikeustason.
 
