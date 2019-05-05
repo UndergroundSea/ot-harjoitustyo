@@ -24,3 +24,9 @@ Varsinaisen sovelluslogiikan muodostavat sitten luokat MineField ja Pane, vaikka
 
 ![Sovelluslogiikkakuvaus](https://github.com/UndergroundSea/ot-harjoitustyo/blob/master/dokumentaatio/Sovelluslogiikka.png)
 
+-------------------------------------------
+
+**Tietojen tallennus**
+
+Sovellus tallentaa voitettujen pelien määrän tiedostoon nimeltä save.txt . Sellaisen tiedoston on pakko olla olemassa ohjelman pyörimisen mahdollistamiseksi, aina kun voitetaan peli, se tiedosto korvataan uudella samannimisellä tiedostolla, joka sisältää uuden voitettujen pellien määrän.
+
