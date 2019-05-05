@@ -13,11 +13,14 @@ Ohjelma sisältää kolme pakkausta. Pakkaus userinterface sisältää pelkän g
 
 Pakkauksen userinterface luokka UserInterface luo aloitusnäkymä-olion ja sille scenen, johon sitten tämä aloitusnäkymä luodaan.
 Luokka UserInterface luo tämän aloitusnäkymän luokan StartingInterface kautta. Kun aloitusnäkymästä vaihdetaan pelinäkymään, pelinäkymä luodaan luokan gameMode kautta.
+
 ![Käyttöliittymäkuvaus](https://github.com/UndergroundSea/ot-harjoitustyo/blob/master/dokumentaatio/UserInterface.png)
 
 -----------------------------------------------
 
 **Sovelluslogiikka**
 
-Varsinaisen sovelluslogiikan muodostavat sitten luokat MineField ja Pane, vaikka eivät nekään täysin eriytettyjä 
+Varsinaisen sovelluslogiikan muodostavat sitten luokat MineField ja Pane, vaikka eivät nekään täysin eriytettyjä graafisesta käyttöliittymästä ole. Luokka Pane hoitaa kaiken ruutuihin liittyvän, eli suurimman osan pelin aikana tapahtuvista tapahtumista. Luokan Pane metodien avulla ruudut käännetään ja samassa tutkitaan hävitäänkö tai voitetaanko peli. Luokka Minefield laskee pelin aikana ruudun ympärillä olevien miinojen määrän ja ilmoittaa sen kyseiselle ruudulle.
+
 ![Sovelluslogiikkakuvaus](https://github.com/UndergroundSea/ot-harjoitustyo/blob/master/dokumentaatio/Sovelluslogiikka.png)
+
